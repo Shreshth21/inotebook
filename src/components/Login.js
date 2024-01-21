@@ -18,7 +18,7 @@ const Login = (props) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: credentials.email, password: credentials.password })
         };
-        const url = "http://localhost:5000/api/auth/login";
+        const url = "https://inotebook-2tjk.onrender.com/api/auth/login";
         const response = await fetch(url, requestOptions);
         const json = await response.json();
         if (json.success) {

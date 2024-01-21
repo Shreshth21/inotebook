@@ -21,7 +21,7 @@ const Signup = (props) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password })
     };
-    const url = "http://localhost:5000/api/auth/createuser";
+    const url = "https://inotebook-2tjk.onrender.com/api/auth/createuser";
     const response = await fetch(url, requestOptions);
     const json = await response.json();
     if (json.success) {
